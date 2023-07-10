@@ -5,13 +5,22 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
+    private Boolean reserved;
 
-    public User(String email, String firstName, String lastName, String password) {
+    public User(String email, String firstName, String lastName, String password,boolean reserved) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
+        this.reserved = reserved;
+    }
 
+    public Boolean getReserved() {
+        return reserved;
+    }
+
+    public void setReserved(Boolean reserved) {
+        this.reserved = reserved;
     }
 
     public User() {
