@@ -3,11 +3,12 @@
     <string name="title_activity_navigator">Navigator</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">Mazar</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="go_to_services">Pick Services</string>
     <string name="action_settings">Settings</string>
-
+    <string name="choose_duration_prompt">Choose Duration</string>
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -20,6 +21,15 @@
         <item>200-350</item>
         <item>more than 350</item>
     </string-array>
+
+    <string-array name="durations">
+        <item>1 day</item>
+        <item>3 days</item>
+        <item>7 days</item>
+        <!-- Add more duration options as needed -->
+    </string-array>
+
+
 
     <string-array name="guest_counts">
         <item>1</item>

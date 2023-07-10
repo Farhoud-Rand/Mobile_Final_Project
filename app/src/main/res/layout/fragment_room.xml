@@ -17,20 +17,19 @@
     <Spinner
         android:id="@+id/spinnerGuestCount"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:entries="@array/guest_counts"
         android:paddingEnd="10dp"
-        android:paddingBottom="10dp"
-        />
+        android:paddingBottom="10dp" />
 
     <Spinner
         android:id="@+id/spinnerDesiredPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/desired_prices"
+        android:minHeight="48dp"
         android:paddingEnd="10dp"
-        android:paddingBottom="10dp"
-        />
+        android:paddingBottom="10dp" />
 
     <Button
         android:id="@+id/btnSearch"
