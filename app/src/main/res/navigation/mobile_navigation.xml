@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.final_project.UI.Home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.final_project.UI.Profile.profile"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.final_project.UI.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/room"
+        android:name="com.example.final_project.UI.Room.room"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_room" />
+
+    <fragment
+        android:id="@+id/room_service"
+        android:name="com.example.final_project.UI.room_service.RoomServiceFragment"
+        android:label="@string/room_services"
+        tools:layout="@layout/fragment_room_service" />
+
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.example.final_project.UI.Cart.cart"
+        android:label="@string/Cart"
+        tools:layout="@layout/fragment_cart" />
+</navigation>

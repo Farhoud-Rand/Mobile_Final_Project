@@ -1,3 +1,94 @@
 <resources>
-    <string name="app_name">Final_Project</string>
+    <string name="app_name">Project</string>
+    <string name="title_activity_navigator">Navigator</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_room">Room</string>
+    <string name="room_services">Room Services</string>
+    <string name="Cart">Cart</string>
+
+    <string-array name="desired_prices">
+        <item>100-200</item>
+        <item>200-350</item>
+        <item>more than 350</item>
+    </string-array>
+
+    <string-array name="guest_counts">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4 or more</item>
+
+    </string-array>
+
+    // Data in food page
+    //=======================
+    // Steak
+    <string name="steak">- Beef steak.
+                      \n\n- Seasoning.
+                      \n\n- Garlic.
+                      \n\n- Olive oil.
+                      \n\n- Salt and pepper.
+                      \n\n- Cauliflower.
+                      \n\n- Parsley.
+                      \n\n- Cream.
+                      \n\n- Butter.</string>
+    // Caesar salad
+    <string name="caesar_salad">- Lettuce.
+                      \n\n- Grilled chicken.
+                      \n\n- Boiled eggs.
+                      \n\n- Olive oil.
+                      \n\n- Parmesan cheese.
+                      \n\n- Parmesan cheese.
+                      \n\n- Parsley.
+                      \n\n- Cream.
+                      \n\n- Butter.</string>
+    // Sushi
+    <string name="sushi">- Fresh salmon or tuna.
+                      \n\n- Rice.
+                      \n\n- Seaweed.
+                      \n\n- Soy sauce.</string>
+    //Neapolitan Pizza
+    <string name="pizza">- Thin dough crust.
+                      \n\n- Tomato sauce.
+                      \n\n- Mozzarella cheese.
+                      \n\n- Basil.
+                      \n\n- olive oil.</string>
+    // Paella
+    <string name="paella">- Rice.
+                      \n\n- saffron.
+                      \n\n- chicken or seafood (such as shrimp and mussels).
+                      \n\n- vegetables.</string>
+    //Falafel
+    <string name="falafel">- Chickpeas.
+                      \n\n- Cilantro.
+                      \n\n- Onion.
+                      \n\n- Garlic.
+                      \n\n- Cumin.
+                      \n\n- Baking powder.
+                      \n\n- Parsley.
+                      \n\n- Salt and pepper.
+                      \n\n- Flour.
+                      \n\n- Lemon juice.</string>
+    //Chicken Tikka Masala
+    <string name="chicken_tikka_masala">- Marinated chicken.
+                      \n\n- Yogurt.
+                      \n\n- Tomato sauce.
+                      \n\n- Spices.
+                      \n\n- Cream.</string>
+    //Pad Thai
+    <string name="pad_thai">- Rice noodles.
+                      \n\n- Shrimp or chicken.
+                      \n\n- Eggs.
+                      \n\n- Bean sprouts.
+                      \n\n- Peanuts.
+                      \n\n- Tamarind sauce.</string>
 </resources>
