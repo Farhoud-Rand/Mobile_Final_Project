@@ -10,5 +10,12 @@ public class DoubleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_double);
+        // Set the title in the action bar
+        getSupportActionBar().setTitle("Double Rooms");
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed(); // Go back to the previous screen
+        return true;
     }
 }

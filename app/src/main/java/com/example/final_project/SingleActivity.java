@@ -36,7 +36,8 @@ public class SingleActivity extends AppCompatActivity {
         adapter = new PictureAdapter(this, pictureList);
         recyclerView.setAdapter(adapter);
 
-
+        // Set the title in the action bar
+        getSupportActionBar().setTitle("Single Rooms");
     }
     @Override
     public boolean onSupportNavigateUp() {

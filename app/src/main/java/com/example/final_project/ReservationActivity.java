@@ -70,6 +70,9 @@ public class ReservationActivity extends AppCompatActivity {
             }
         });
 
+        // Set the title in the action bar
+        getSupportActionBar().setTitle("Reservation");
+
     }
     @Override
     public boolean onSupportNavigateUp() {
