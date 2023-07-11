@@ -99,7 +99,7 @@ public class HomeFragment extends Fragment {
                     }
                 });
             }
-        }, 0, 2000); // Delay of 2 seconds
+        }, 0, 3000); // Delay of 2 seconds
     }
     private void stopSlideshow() {
         if (slideshowTimer != null) {

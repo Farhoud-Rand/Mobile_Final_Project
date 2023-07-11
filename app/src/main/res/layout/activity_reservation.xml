@@ -5,28 +5,94 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-    <Spinner
-        android:id="@+id/durationSpinner"
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/durations"
-        android:padding="10dp"
-        android:prompt="@string/choose_duration_prompt" />
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp"
+        android:text="Please choose the date of your reservation" />
 
-    <com.example.final_project.Models.CustomCalendarView
-        android:id="@+id/calendarView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFFCFC"
-        android:calendarTextColor="#FF0000"
-        android:yearListSelectorColor="@color/purple_500" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/servicesButton"
-        android:layout_width="149dp"
+        <ImageButton
+            android:id="@+id/fromDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_calendar_month_24"
+            android:background="?attr/selectableItemBackground" />
+
+        <EditText
+            android:id="@+id/fromDateEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/go_to_services" />
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/toDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_calendar_month_24"
+            android:background="?attr/selectableItemBackground" />
+
+        <EditText
+            android:id="@+id/toDateEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingEnd="10dp"
+            android:text="Please pick the services you want to include" />
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pool" />
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Massage" />
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GYM" />
+
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"

@@ -1,21 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".OffersActivity">
+    android:layout_height="match_parent">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="وي وي وي وي وي هاي صفحة العروضات"
-        android:textColor="@color/black"
-        android:textSize="60dp"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-42dp" />
+        android:layout_height="match_parent">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- First Offer -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/offer1Image"
+                    android:layout_width="211dp"
+                    android:layout_height="249dp"
+                    android:src="@drawable/wedding" />
+
+                <TextView
+                    android:id="@+id/offer1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_toEndOf="@id/offer1Image"
+                    android:layout_toRightOf="@id/offer1Image"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="Offer 1 Description                           djwkeeeek dwkjkwj" />
+
+                <Button
+                    android:id="@+id/offer1Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/offer1Image"
+                    android:layout_alignStart="@id/offer1Text"
+                    android:layout_alignLeft="@id/offer1Text"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="-98dp"
+                    android:text="Order Now" />
+
+            </RelativeLayout>
+
+
+            <!-- Second Offer -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/offer2Image"
+                    android:layout_width="211dp"
+                    android:layout_height="249dp"
+                    android:src="@drawable/bed" />
+
+                <TextView
+                    android:id="@+id/offer2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_toEndOf="@id/offer2Image"
+                    android:layout_toRightOf="@id/offer2Image"
+                    android:text="Offer 2 Description" />
+
+                <Button
+                    android:id="@+id/offer2Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/offer2Image"
+                    android:layout_alignStart="@id/offer2Text"
+                    android:layout_alignLeft="@id/offer2Text"
+                    android:layout_marginStart="-18dp"
+                    android:layout_marginLeft="-18dp"
+                    android:layout_marginTop="-70dp"
+                    android:text="Order Now" />
+
+            </RelativeLayout>
+
+            <!-- Third Offer -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/offer3Image"
+                    android:layout_width="216dp"
+                    android:layout_height="190dp"
+                    android:src="@drawable/pool" />
+
+                <TextView
+                    android:id="@+id/offer3Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="41dp"
+                    android:layout_toEndOf="@id/offer3Image"
+                    android:layout_toRightOf="@id/offer3Image"
+                    android:text="Offer 3 Description" />
+
+                <Button
+                    android:id="@+id/offer3Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/offer3Image"
+                    android:layout_alignStart="@id/offer3Text"
+                    android:layout_alignLeft="@id/offer3Text"
+                    android:layout_marginStart="-9dp"
+                    android:layout_marginLeft="-9dp"
+                    android:layout_marginTop="-63dp"
+                    android:text="Order Now" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

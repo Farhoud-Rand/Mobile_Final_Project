@@ -45,6 +45,7 @@ public class cart extends Fragment {
         RecyclerView recyclerView = rootView.findViewById(R.id.serviceRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(serviceAdapter);
+        createNewService(new Service("",0));
 
         return rootView;
     }
