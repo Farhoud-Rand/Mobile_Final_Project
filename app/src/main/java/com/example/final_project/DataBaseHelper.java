@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.final_project.Models.User;
-
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public DataBaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -25,7 +23,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
-
+/*
     public void insertUser(User user){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -35,7 +33,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contentValues.put("PASSWORD", user.getPassword());
         sqLiteDatabase.insert("USER", null, contentValues);
     }
-
+*/
 
 
     public Boolean checkusernamepassword(String email, String password) {

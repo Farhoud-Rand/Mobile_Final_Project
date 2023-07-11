@@ -2,17 +2,44 @@ package com.example.final_project.Models;
 
 public class User {
     private String email;
-    private String firstName;
-    private String lastName;
+    private String name;
     private String password;
     private Boolean reserved;
+    private Float total_bill;
 
-    public User(String email, String firstName, String lastName, String password,boolean reserved) {
+    public User(String email, String name, String password, Boolean reserved, Float total_bill) {
         this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.password = password;
         this.reserved = reserved;
+        this.total_bill = total_bill;
+    }
+
+    public User() {
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Boolean getReserved() {
@@ -23,40 +50,11 @@ public class User {
         this.reserved = reserved;
     }
 
-    public User() {
-
+    public Float getTotal_bill() {
+        return total_bill;
     }
 
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setTotal_bill(Float total_bill) {
+        this.total_bill = total_bill;
     }
 }

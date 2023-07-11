@@ -31,6 +31,12 @@
 
     <fragment
         android:id="@+id/room_service"
+        android:name="com.example.final_project.UI.room_service.RoomServicesGridFragment"
+        android:label="@string/room_services"
+        tools:layout="@layout/fragment_room_services_grid" />
+
+    <fragment
+        android:id="@+id/room_service_food"
         android:name="com.example.final_project.UI.room_service.RoomServiceFragment"
         android:label="@string/room_services"
         tools:layout="@layout/fragment_room_service" />

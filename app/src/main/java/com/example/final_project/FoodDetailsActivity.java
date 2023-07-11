@@ -2,6 +2,7 @@ package com.example.final_project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,21 +45,25 @@ public class FoodDetailsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(name);
 
         // Set a listener to add a cart button
-        buy.setOnClickListener(view -> {
-            // Get the service details from the current activity
-            String serviceName = name;
-            // Remove the dollar sign from the price string
-            String priceString = price.replaceAll("\\$", "");
-            double serviceCost = Double.parseDouble(priceString);
-            Service service = new Service(serviceName,serviceCost);
-            cart.createNewService(service);
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Get the service details from the current activity
+                String serviceName = name;
+                // Remove the dollar sign from the price string
+                String priceString = price.replaceAll("\\$", "");
+                double serviceCost = Double.parseDouble(priceString);
+                Service service = new Service(serviceName, serviceCost);
+                cart.createNewService(service);
 
-            // Create a toast message with the service details
-            String message = "Service Name: " + serviceName + "\n" +
-                    "Service Cost: $" + serviceCost;
-            Toast.makeText(FoodDetailsActivity.this, message, Toast.LENGTH_SHORT).show();
+                // Create a toast message with the service details
+                String message = "Service Name: " + serviceName + "\n" +
+                        "Service Cost: $" + serviceCost;
+                Toast.makeText(FoodDetailsActivity.this, message, Toast.LENGTH_SHORT).show();
+            }
         });
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed(); // Go back to the previous screen

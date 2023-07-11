@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.final_project.Models.User;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class SignUp extends AppCompatActivity {
@@ -70,15 +69,15 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                User user = new User();
+                /*User user = new User();
                 user.setEmail(emailAddressText);
                 user.setFirstName(firstNameText);
                 user.setLastName(lastNameText);
-                user.setPassword(passwordText);
+                user.setPassword(passwordText);*/
 
 
                 // Save the user on database
-                dataBaseHelper.insertUser(user);
+                //dataBaseHelper.insertUser(user);
 
                 // Inform that he account has been created.
                 Toast toast = Toast.makeText(view.getContext(), "Account has been created successfully.", Toast.LENGTH_SHORT);
