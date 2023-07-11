@@ -1,6 +1,7 @@
 package com.example.final_project.UI.room_service;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +21,7 @@ import com.example.final_project.R;
 import java.util.ArrayList;
 
 public class RoomServicesGridFragment extends Fragment {
+
     private RecyclerView roomServicesRecyclerView;
     private RoomServicesGridAdapter roomServicesGridAdapter;
 
@@ -32,12 +33,16 @@ public class RoomServicesGridFragment extends Fragment {
 
         // Create an ArrayList of RoomServiceItem objects for the grid
         ArrayList<RoomServiceItem> roomServiceItems = new ArrayList<>();
-        roomServiceItems.add(new RoomServiceItem(R.drawable.falafel, "Your Room Service Title"));
+        roomServiceItems.add(new RoomServiceItem(R.drawable.img1, "Food"));
+        roomServiceItems.add(new RoomServiceItem(R.drawable.img, "Cleaning"));
+        roomServiceItems.add(new RoomServiceItem(R.drawable.img_1, "Laundry"));
+        roomServiceItems.add(new RoomServiceItem(R.drawable.img_2, "Taxi"));
         // Add other RoomServiceItem objects for the grid
 
         // Set up the RecyclerView with the GridLayoutManager and adapter
         int numberOfColumns = 2; // Number of items in each row
         roomServicesRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), numberOfColumns));
+        roomServicesRecyclerView.addItemDecoration(new GridSpacingItemDecoration(numberOfColumns, 5, true));
         roomServicesGridAdapter = new RoomServicesGridAdapter(getContext(), roomServiceItems);
         roomServicesRecyclerView.setAdapter(roomServicesGridAdapter);
 
@@ -106,30 +111,45 @@ public class RoomServicesGridFragment extends Fragment {
                         int position = getAdapterPosition();
                         RoomServiceItem roomServiceItem = roomServiceItems.get(position);
                         if (position == 0) {
-                            // Get the NavController
-                            NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_content_navigator);
-                            // Navigate to the RoomServiceFragment
-                            navController.navigate(R.id.room_service_food);
-                            /*// Handle the click for the first item (redirect to the RoomServiceFragment)
-                            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                            fragmentManager.popBackStackImmediate(); // Remove the current fragment from the back stack
-
-                            // Create an instance of the RoomServiceFragment
-                            RoomServiceFragment roomServiceFragment = new RoomServiceFragment();
-
-                            // Replace the current fragment with the RoomServiceFragment
-                            fragmentManager.beginTransaction()
-                                    .replace(R.id.nav_host_fragment_content_navigator, roomServiceFragment)
-                                    .addToBackStack(null) // Add the transaction to the back stack
-                                    .commit();*/
+                            // Handle the click for the first item (navigate to the RoomServiceFoodFragment)
+                            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_content_navigator)
+                                    .navigate(R.id.room_service_food);
                         } else {
                             // Handle the click for other items in the grid
                             // ...
                         }
                     }
                 });
-
             }
+        }
+    }
+    private static class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
+        private final int spanCount;
+        private final int spacing;
+        private final boolean includeEdge;
+
+        public GridSpacingItemDecoration(int spanCount, int spacing, boolean includeEdge) {
+            this.spanCount = spanCount;
+            this.spacing = spacing;
+            this.includeEdge = includeEdge;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            int position = parent.getChildAdapterPosition(view);
+            int column = position % spanCount;
+
+            if (includeEdge) {
+                outRect.left = spacing - column * spacing / spanCount;
+                outRect.right = (column + 1) * spacing / spanCount;
+            } else {
+                outRect.left = column * spacing / spanCount;
+                outRect.right = spacing - (column + 1) * spacing / spanCount;
+            }
+
+            outRect.top = spacing; // Add this line to set top spacing
+
+            outRect.bottom = spacing;
         }
     }
 }
